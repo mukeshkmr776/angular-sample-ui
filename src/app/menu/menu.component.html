@@ -1,0 +1,58 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">  
+  <a class="navbar-brand d-flex align-items-center" [routerLink]="['/home']">
+    <i class="material-icons">menu</i> &nbsp;&nbsp; Logo
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav flex-fill ml-5">
+
+      <li class="nav-item" *ngFor="let value of headerOptions">
+        <a class="nav-link" [routerLink]="[value.url]" routerLinkActive="active">{{value.name}}</a>
+      </li>
+
+      <li class="nav-item ml-auto">
+        <a class="nav-link d-flex align-items-center" href="javascript: void(0);">
+          <i class="material-icons">help</i> &nbsp;&nbsp;
+        </a>
+      </li>
+
+      <li>
+        <a class="nav-link d-flex align-items-center" href="javascript: void(0);">
+          <i class="material-icons" [innerHtml]="active ? 'notifications': 'notifications_none'"> </i> &nbsp;&nbsp;
+        </a>
+      </li>
+
+      <li class="d-flex align-items-center text-white nav-item dropdown menubar-login-details">
+        <a class="nav-link dropdown-toggle d-flex active" data-toggle="dropdown" href="#">
+          <i class="material-icons">account_circle</i> &nbsp;&nbsp;
+          <span class="text-white text-lead">mukeshkmr776@gmail.com</span> &nbsp;&nbsp;
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item d-flex" href="javascript: void(0);">
+            <i class="material-icons">settings</i> &nbsp;&nbsp; 
+            <span>Settings</span>
+          </a>
+          <a class="dropdown-item d-flex" [routerLink]="['/login']">
+            <i class="material-icons">exit_to_app</i> &nbsp;&nbsp; 
+            <span>Logout</span>
+          </a>
+          <a class="dropdown-item d-flex" href="javascript: void(0);">
+            <i class="material-icons">person</i> &nbsp;&nbsp; 
+            <span>About</span>
+          </a>
+          </div>
+      </li>
+      <!-- <li class="nav-item">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+      </li>       -->
+    </ul>
+  </div>
+</nav>

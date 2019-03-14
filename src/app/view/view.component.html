@@ -1,0 +1,48 @@
+<div class="banner row align-items-center justify-content-between bg-dark">
+  <div class="d-flex align-items-center flex-fill">
+
+    <a [routerLink]="['/home']" class="btn mr-1 pl-0 d-flex">
+      <i class="material-icons icon-arrow_back">arrow_back</i>
+    </a>
+
+    <div class="flex-column d-flex">
+      <div class="d-flex align-items-center">
+        <span class="text-name">MukkiCluster</span>
+        <span class="badge badge-success">STABLE</span>
+      </div>
+      <div class="text-monospace">
+        <a [routerLink]="['/home']" class="btn text-white p-0 text-decoration-none">Home</a> /
+        <span class="text-muted">Cluster</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<ul class="nav-subbanner d-flex align-items-center sticky-top">
+  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.INFO" [ngClass]="{'active': VIEW_TYPES.INFO == selectedViewType}">
+    Information
+  </li>
+  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.STAT" [ngClass]="{'active': VIEW_TYPES.STAT == selectedViewType}">
+    Statistics
+  </li>
+  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.LOG" [ngClass]="{'active': VIEW_TYPES.LOG == selectedViewType}">
+    Logs
+  </li>
+  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.EVENT" [ngClass]="{'active': VIEW_TYPES.EVENT == selectedViewType}">
+    Events
+  </li>
+  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.RG" [ngClass]="{'active': VIEW_TYPES.RG == selectedViewType}">
+    Resource Groups
+  </li>
+  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.SETTING" [ngClass]="{'active': VIEW_TYPES.SETTING == selectedViewType}">
+    Settings
+  </li>
+</ul>
+
+<!-- Add flex-fill to stretch box to bottom -->
+<div class="content d-flex flex-column ">
+  <div class="item">
+    Hello world
+  </div>
+</div>

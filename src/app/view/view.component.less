@@ -1,0 +1,74 @@
+.banner {
+  height: 7em;
+  margin: 0;
+  padding: 1.5em 2em;
+  color: white;
+  // background-color: #3C4252 !important;
+}
+
+.icon-arrow_back {
+  color: white;
+}
+
+.text-name {
+  font-size: 1.75em;
+  margin-right: .575em;
+}
+
+
+.nav-subbanner {
+
+  top: 55px;
+  margin: 0;
+  padding: 0 2rem;
+
+  background-color: white;
+
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+
+  list-style: none;
+
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+  .item {
+    position: relative;
+    height: 3.5em;
+    padding: 0 1em;
+
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
+
+    cursor: pointer;
+
+  }
+
+  .active {
+    cursor: default;
+    font-weight: 500;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: #3C4252;
+    }
+  }
+
+}
+
+.content {
+  margin: 2em;
+  border: 1px solid rgba(0,0,0,.12);
+  padding: 1em;
+
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+}
