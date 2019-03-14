@@ -10,11 +10,11 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav flex-fill ml-5">
 
-      <li class="nav-item" *ngFor="let value of headerOptions">
+      <li class="nav-item" *ngFor="let value of headerOptions; let last = last;" [ngClass]="{'mr-auto': last}">
         <a class="nav-link" [routerLink]="[value.url]" routerLinkActive="active">{{value.name}}</a>
       </li>
 
-      <li class="nav-item ml-auto">
+      <li class="nav-item">
         <a class="nav-link d-flex align-items-center" href="javascript: void(0);">
           <i class="material-icons">help</i> &nbsp;&nbsp;
         </a>
