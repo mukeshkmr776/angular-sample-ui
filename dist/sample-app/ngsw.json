@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1552757032449,
+  "timestamp": 1552768175501,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -8,15 +8,15 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/es2015-polyfills.c5dd28b362270c767b34.js",
+        "/es2015-polyfills.js",
         "/favicon.ico",
         "/index.html",
-        "/main.e993a51c6fcc8a22fadd.js",
-        "/polyfills.d37cf3df0eb92a316744.js",
-        "/runtime.26209474bfa8dc87a77c.js",
-        "/scripts.818856db0c7d75eb30a8.js",
-        "/styles.e3909f391e9b398445b9.css",
-        "/vendor.6f789e780422b7d1efc1.js"
+        "/main.js",
+        "/polyfills.js",
+        "/runtime.js",
+        "/scripts.js",
+        "/styles.css",
+        "/vendor.js"
       ],
       "patterns": []
     },
@@ -25,10 +25,10 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/MaterialIcons-Regular.012cf6a10129e2275d79.woff",
-        "/MaterialIcons-Regular.570eb83859dc23dd0eec.woff2",
-        "/MaterialIcons-Regular.a37b0c01c0baf1888ca8.ttf",
-        "/MaterialIcons-Regular.e79bfd88537def476913.eot",
+        "/MaterialIcons-Regular.eot",
+        "/MaterialIcons-Regular.ttf",
+        "/MaterialIcons-Regular.woff",
+        "/MaterialIcons-Regular.woff2",
         "/assets/fonts/material-icons/MaterialIcons-Regular.eot",
         "/assets/fonts/material-icons/MaterialIcons-Regular.ijmap",
         "/assets/fonts/material-icons/MaterialIcons-Regular.svg",
@@ -67,10 +67,10 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/MaterialIcons-Regular.012cf6a10129e2275d79.woff": "c6c953c2ccb2ca9abb21db8dbf473b5a435f0082",
-    "/MaterialIcons-Regular.570eb83859dc23dd0eec.woff2": "09963592e8c953cc7e14e3fb0a5b05d5042e8435",
-    "/MaterialIcons-Regular.a37b0c01c0baf1888ca8.ttf": "fc05de31234e0090f7ddc28ce1b23af4026cb1da",
-    "/MaterialIcons-Regular.e79bfd88537def476913.eot": "26fb8cecb5512223277b4d290a24492a0f09ede1",
+    "/MaterialIcons-Regular.eot": "26fb8cecb5512223277b4d290a24492a0f09ede1",
+    "/MaterialIcons-Regular.ttf": "fc05de31234e0090f7ddc28ce1b23af4026cb1da",
+    "/MaterialIcons-Regular.woff": "c6c953c2ccb2ca9abb21db8dbf473b5a435f0082",
+    "/MaterialIcons-Regular.woff2": "09963592e8c953cc7e14e3fb0a5b05d5042e8435",
     "/assets/fonts/material-icons/MaterialIcons-Regular.eot": "26fb8cecb5512223277b4d290a24492a0f09ede1",
     "/assets/fonts/material-icons/MaterialIcons-Regular.ijmap": "df468e87685c24b2a5d431036d4d5a434efdc28e",
     "/assets/fonts/material-icons/MaterialIcons-Regular.svg": "52ad95c4e0691e8c9b8ef97c551a9970eb498ca0",
@@ -103,15 +103,15 @@
     "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/es2015-polyfills.c5dd28b362270c767b34.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
+    "/es2015-polyfills.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
     "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "/index.html": "ffc42d092a356b27e72c38a5ba2a77d13721fa6b",
-    "/main.e993a51c6fcc8a22fadd.js": "1abf3dddf591202e0db243b355bdf9b60a97611c",
-    "/polyfills.d37cf3df0eb92a316744.js": "2cf5115e17552ef0ee5167674ea21962877f540c",
-    "/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/scripts.818856db0c7d75eb30a8.js": "133d905b1567185b1180a84fdd640a7ef93c516d",
-    "/styles.e3909f391e9b398445b9.css": "483ab8750628b134aa6d5915a86cca259e66f141",
-    "/vendor.6f789e780422b7d1efc1.js": "0afdcf20395d550d4916d6ecde4beb2a1c275cbb"
+    "/index.html": "913d22044bfc7b1684c152a23ce1a91aca8fd49e",
+    "/main.js": "7bcf6ec271c4323dc2170ff74b3fc2f667109c12",
+    "/polyfills.js": "2cf5115e17552ef0ee5167674ea21962877f540c",
+    "/runtime.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/scripts.js": "133d905b1567185b1180a84fdd640a7ef93c516d",
+    "/styles.css": "699c7dadfc9c0460025031b041716e1bc3306ab7",
+    "/vendor.js": "0afdcf20395d550d4916d6ecde4beb2a1c275cbb"
   },
   "navigationUrls": [
     {

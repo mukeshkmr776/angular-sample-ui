@@ -41,27 +41,39 @@
 </ul>
 
 <!-- Add flex-fill to stretch box to bottom -->
-<div class="content d-flex flex-column flex-fill">
+
+<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.INFO">
   <div class="item">
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
-    <p>Hello world</p>
+    <span>{{selectedViewType}}</span>
+  </div>
+</div>
+
+<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.STAT">
+  <div class="item">
+    <span>{{selectedViewType}}</span>
+  </div>
+</div>
+
+<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.LOG">
+  <div class="item">
+    <span>{{selectedViewType}}</span>
+  </div>
+</div>
+
+<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.EVENT">
+  <div class="item">
+    <span>{{selectedViewType}}</span>
+  </div>
+</div>
+
+<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.RG">
+  <div class="item">
+    <span>{{selectedViewType}}</span>
+  </div>
+</div>
+
+<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.SETTING">
+  <div class="item">
+    <span>{{selectedViewType}}</span>
   </div>
 </div>

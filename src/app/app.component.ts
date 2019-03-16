@@ -1,46 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { animate, query, style, transition, trigger } from '@angular/animations';
 import { LoadingBarService } from 'ngx-loading-bar';
+import { Animations } from './animations/index';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
-  animations: [
-    trigger('myAnimation', [
-      transition('* => *', [
-        query(
-          ':enter',
-          [style({
-            opacity: 0
-          })], {
-            optional: true
-          }
-        ),
-        query(
-          ':leave',
-          [style({
-            opacity: 1
-          }), animate('.3s', style({
-            opacity: 0
-          }))], {
-            optional: true
-          }
-        ),
-        query(
-          ':enter',
-          [style({
-            opacity: 0
-          }), animate('.3s', style({
-            opacity: 1
-          }))], {
-            optional: true
-          }
-        )
-      ])
-    ])
-  ]
+  animations: Animations
 })
 export class AppComponent implements AfterViewInit {
   loading: boolean;

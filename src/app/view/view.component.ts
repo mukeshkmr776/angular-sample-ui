@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Animations } from '../animations/index';
 
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
-  styleUrls: ['./view.component.less']
+  styleUrls: ['./view.component.less'],
+  animations: Animations
 })
 export class ViewComponent implements OnInit {
 

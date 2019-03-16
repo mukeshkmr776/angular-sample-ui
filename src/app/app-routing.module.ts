@@ -6,9 +6,9 @@ import { ViewComponent } from './view/view.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'view/:id', component: ViewComponent },
+  { path: 'home', component: HomeComponent         , data: { animation: 'home' }},
+  { path: 'login', component: LoginComponent       , data: { animation: 'login' }},
+  { path: 'view/:id', component: ViewComponent     , data: { animation: 'view' }},
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login' }
 ];
