@@ -1,79 +1,81 @@
 <div class="banner row align-items-center justify-content-between bg-dark">
-  <div class="d-flex align-items-center flex-fill">
-
-    <a [routerLink]="['/home']" class="btn mr-1 pl-0 d-flex">
-      <i class="material-icons icon-arrow_back">arrow_back</i>
-    </a>
-
-    <div class="flex-column d-flex">
-      <div class="d-flex align-items-center">
-        <span class="text-name">MukkiCluster</span>
-        <span class="badge badge-success">STABLE</span>
+    <div class="d-flex align-items-center flex-fill">
+  
+      <a [routerLink]="['/home']" class="btn mr-1 pl-0 d-flex">
+        <i class="material-icons icon-arrow_back">arrow_back</i>
+      </a>
+  
+      <div class="flex-column d-flex">
+        <div class="d-flex align-items-center">
+          <span class="text-name">MukkiCluster</span>
+          <span class="badge badge-success">STABLE</span>
+        </div>
+        <div class="text-monospace">
+          <a [routerLink]="['/home']" class="btn text-white p-0 text-decoration-none">Home</a> /
+          <span class="text-muted">Cluster</span>
+        </div>
       </div>
-      <div class="text-monospace">
-        <a [routerLink]="['/home']" class="btn text-white p-0 text-decoration-none">Home</a> /
-        <span class="text-muted">Cluster</span>
-      </div>
+  
     </div>
-
   </div>
-</div>
-
-<ul class="nav-subbanner d-flex align-items-center sticky-top">
-  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.INFO" [ngClass]="{'active': VIEW_TYPES.INFO == selectedViewType}">
-    Information
-  </li>
-  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.STAT" [ngClass]="{'active': VIEW_TYPES.STAT == selectedViewType}">
-    Statistics
-  </li>
-  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.LOG" [ngClass]="{'active': VIEW_TYPES.LOG == selectedViewType}">
-    Logs
-  </li>
-  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.EVENT" [ngClass]="{'active': VIEW_TYPES.EVENT == selectedViewType}">
-    Events
-  </li>
-  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.RG" [ngClass]="{'active': VIEW_TYPES.RG == selectedViewType}">
-    Resource Groups
-  </li>
-  <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.SETTING" [ngClass]="{'active': VIEW_TYPES.SETTING == selectedViewType}">
-    Settings
-  </li>
-</ul>
-
-<!-- Add flex-fill to stretch box to bottom -->
-
-<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.INFO">
-  <div class="item">
-    <span>{{selectedViewType}}</span>
+  
+  <ul class="nav-subbanner d-flex align-items-center sticky-top">
+    <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.INFO" [ngClass]="{'active': VIEW_TYPES.INFO == selectedViewType}">
+      Information
+    </li>
+    <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.STAT" [ngClass]="{'active': VIEW_TYPES.STAT == selectedViewType}">
+      Statistics
+    </li>
+    <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.LOG" [ngClass]="{'active': VIEW_TYPES.LOG == selectedViewType}">
+      Logs
+    </li>
+    <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.EVENT" [ngClass]="{'active': VIEW_TYPES.EVENT == selectedViewType}">
+      Events
+    </li>
+    <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.RG" [ngClass]="{'active': VIEW_TYPES.RG == selectedViewType}">
+      Resource Groups
+    </li>
+    <li class="item d-flex align-items-center" (click)="selectedViewType = VIEW_TYPES.SETTING" [ngClass]="{'active': VIEW_TYPES.SETTING == selectedViewType}">
+      Settings
+    </li>
+  </ul>
+    
+  <!-- Add flex-fill to stretch box to bottom -->
+  
+  <div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.INFO">
+    <div class="item">
+      <span>{{selectedViewType}}</span>
+      <p *ngFor="let n of [1,2,3,4,5,6,7,8,9]">Lorem Ipsum</p>
+    </div>
   </div>
-</div>
-
-<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.STAT">
-  <div class="item">
-    <span>{{selectedViewType}}</span>
+  
+  <div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.STAT">
+    <div class="item">
+      <span>{{selectedViewType}}</span>
+    </div>
   </div>
-</div>
-
-<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.LOG">
-  <div class="item">
-    <span>{{selectedViewType}}</span>
+  
+  <div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.LOG">
+    <div class="item">
+      <span>{{selectedViewType}}</span>
+    </div>
   </div>
-</div>
-
-<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.EVENT">
-  <div class="item">
-    <span>{{selectedViewType}}</span>
+  
+  <div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.EVENT">
+    <div class="item">
+      <span>{{selectedViewType}}</span>
+    </div>
   </div>
-</div>
-
-<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.RG">
-  <div class="item">
-    <span>{{selectedViewType}}</span>
+  
+  <div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.RG">
+    <div class="item">
+      <span>{{selectedViewType}}</span>
+    </div>
   </div>
-</div>
-
-<div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.SETTING">
-  <div class="item">
-    <span>{{selectedViewType}}</span>
+  
+  <div class="content d-flex flex-column" *ngIf="selectedViewType === VIEW_TYPES.SETTING">
+    <div class="item">
+      <span>{{selectedViewType}}</span>
+    </div>
   </div>
-</div>
+  

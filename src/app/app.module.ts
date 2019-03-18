@@ -12,6 +12,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { ViewComponent } from './view/view.component';
+import { FuseSplashScreenService } from 'services/splash-screen.service';
 
 @NgModule({
   declarations: [
@@ -31,21 +32,8 @@ import { ViewComponent } from './view/view.component';
       enabled: environment.production
     })
   ],
-  providers: [{
-    provide: APP_INITIALIZER,
-    useFactory: initializeApp2,
-    multi: true
-  }],
+  providers: [ FuseSplashScreenService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
 
-export function initializeApp2() {
-  return (): Promise < any > => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve();
-      }, 0);
-    });
-  };
-}

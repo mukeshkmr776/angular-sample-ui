@@ -48,12 +48,18 @@
   }
 }
 
+.navbar-brand {
+  color: white!important;
+}
+
 .forgot-pass-link {
   font-size: .875em;
 }
 
 
 .menubar-login-details {
+  cursor: pointer;
+
   .dropdown-toggle::after {
     content: none !important;
   }
@@ -62,6 +68,17 @@
     width: 100%;
     margin-top: 7.5px;
     border-radius: 0;
+    background-color: #343a3f;
+    border: none;
+    padding-top: 0;
+    cursor: pointer;
+    &> a {
+      color: white;
+      &:hover {
+        color: white;
+        background-color: #3a3f42;
+      }
+    }
   }
 
   .dropdown-item {

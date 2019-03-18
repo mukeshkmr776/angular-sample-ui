@@ -1,3 +1,5 @@
+@import './app/loader/loader.component.less';
+
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -11,11 +13,9 @@ body {
   -moz-osx-font-smoothing: auto;
 }
 
-
 .login-page {
   background-color: #343a40 !important;
 }
-
 
 app-root, router-outlet~* {
   display: flex;
@@ -35,4 +35,13 @@ app-root, router-outlet~* {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 
+}
+
+// Overriding bootstrap's property to fix dropdown behing issue on sticky top
+.sticky-top {
+  z-index: 5 !important;
+}
+
+.overflow {
+  overflow: hidden;
 }

@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { LoadingBarService } from 'ngx-loading-bar';
 import { Animations } from './animations/index';
+import { FuseSplashScreenService } from 'services/splash-screen.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ export class AppComponent implements AfterViewInit {
   loading: boolean;
   currentUrl: string;
 
-  constructor(private router: Router, private loadingBarService: LoadingBarService) {
+  constructor(private router: Router, private loadingBarService: LoadingBarService,
+              private fuseSplashScreenService: FuseSplashScreenService) {
     this.loading = true;
   }
 
