@@ -1,0 +1,31 @@
+:host {
+    position: relative;
+}
+
+.sky {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    min-height: 50%;
+    max-height: 50%;
+    box-sizing: border-box;
+    padding: 48px 48px 32px;
+    overflow: hidden;
+    -webkit-transform: skewY(8deg);
+    transform: skewY(5deg);
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+    background-color: #1976d2;
+    background: linear-gradient(467deg,#0d47a1,#42a5f5);
+    color: #fff;
+}
+
+.jumbotron {
+    background: linear-gradient(467deg,#0d47a1,#42a5f5);
+    z-index: 104;
+    color: white;
+}

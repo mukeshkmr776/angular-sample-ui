@@ -10,12 +10,23 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1976d2">
 <link rel="stylesheet" href="styles.css"></head>
 
-<body>
+<body class="overflow">
+
+  <fuse id="app-loader">
+    <div class="loading">
+      <div class="svg-wrapper">
+        <svg class="circle-loader" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="15" />
+        </svg>
+      </div>
+    </div>
+  </fuse>
+
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 <script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="es2015-polyfills.js" nomodule></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="scripts.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
