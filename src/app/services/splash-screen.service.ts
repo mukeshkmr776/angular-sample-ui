@@ -14,7 +14,6 @@ export class FuseSplashScreenService {
     @Inject(DOCUMENT) private document: any,
     private router: Router
   ) {
-    console.log('inside constructor');
     // Initialize
     this.init();
   }

@@ -17,6 +17,10 @@ body {
   background-color: #343a40 !important;
 }
 
+fuse .loading {
+  background-color: #2D323D;
+}
+
 app-root, router-outlet~* {
   display: flex;
   flex: 1 0 auto;
@@ -34,7 +38,6 @@ app-root, router-outlet~* {
   width: 100%;
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-
 }
 
 // Overriding bootstrap's property to fix dropdown behing issue on sticky top
@@ -44,4 +47,53 @@ app-root, router-outlet~* {
 
 .overflow {
   overflow: hidden;
+}
+
+input:focus {
+  outline: none;
+}
+
+// Default Scrollbar
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+  opacity: .5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+// Google
+.google {
+  position: absolute;
+  right: 37px;
+  opacity: .5;
+  pointer-events: none;
+
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+
+  .powered { color: gray; }
+  .g1 { color: #4285f4; font-size: 1.5em; }
+  .o1 { color: #ea4535; font-size: 1.5em; }
+  .o2 { color: #f9bd36; font-size: 1.5em; }
+  .g2 { color: #4285f4; font-size: 1.5em; }
+  .l  { color: #56a954; font-size: 1.5em; }
+  .e  { color: #ea4535; font-size: 1.5em; }
+}
+
+* {
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }

@@ -9,17 +9,13 @@ export class MenuComponent implements OnInit {
 
   headerOptions: Array<object> = [
     { name: 'Home', url: '/home' },
-    { name: 'View', url: '/view/5' }
+    { name: 'ClusterView', url: '/view/5' }
   ];
 
-  active = false;
+  active = true;
 
   constructor() { }
 
-  ngOnInit() {
-    setInterval(() => {
-      this.active = !this.active;
-    }, 1000);
-  }
+  ngOnInit() { }
 
 }

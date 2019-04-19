@@ -12,7 +12,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { ViewComponent } from './view/view.component';
-import { FuseSplashScreenService } from 'services/splash-screen.service';
+import { FuseSplashScreenService } from 'src/app/services/splash-screen.service';
 
 @NgModule({
   declarations: [

@@ -1,8 +1,8 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { LoadingBarService } from 'ngx-loading-bar';
-import { Animations } from './animations/index';
-import { FuseSplashScreenService } from 'services/splash-screen.service';
+import { Animations } from 'src/app/animations/router';
+import { FuseSplashScreenService } from 'src/app/services/splash-screen.service';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +15,9 @@ export class AppComponent implements AfterViewInit {
   currentUrl: string;
 
   constructor(private router: Router, private loadingBarService: LoadingBarService,
-              private fuseSplashScreenService: FuseSplashScreenService) {
-    this.loading = true;
-  }
+    private fuseSplashScreenService: FuseSplashScreenService) {
+this.loading = true;
+}
 
 
   ngAfterViewInit() {
@@ -27,8 +27,10 @@ export class AppComponent implements AfterViewInit {
         this.loading = true;
       } else if (event instanceof NavigationEnd || event instanceof NavigationCancel) {
         this.currentUrl = event.url;
-        this.loading = false;
-        this.loadingBarService.complete();
+        setTimeout(() => { // for illusion to show loading when route change
+          this.loading = false;
+          this.loadingBarService.complete();
+        }, 1000);
       }
     });
   }
