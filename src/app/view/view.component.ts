@@ -16,24 +16,23 @@ export class ViewComponent implements OnInit {
   id;
 
   VIEW_TYPES = {
-    INFO: 'INFO',
-    RG: 'RG',
-    STAT: 'STAT',
-    LOG: 'LOG',
-    EVENT: 'EVENT',
-    SETTING: 'SETTING'
+    INFO: 'Information',
+    STAT: 'Statistics',
+    LOG: 'Logs',
+    EVENT: 'Events',
+    RG: 'Resource Groups',
+    SETTING: 'Settings'
   };
 
   selectedViewType;
   isLoading = false;
 
   constructor(private route: ActivatedRoute) {
-    this.selectedViewType = this.VIEW_TYPES.INFO;
-  }
-
-  ngOnInit() {
     this.route.params.subscribe((value: any) => { this.id = value.id; });
-    this.setView(this.VIEW_TYPES.INFO);
+  }
+  
+  ngOnInit() {
+    this.setView(this.VIEW_TYPES.EVENT);
   }
 
   setView(viewBox: any) {

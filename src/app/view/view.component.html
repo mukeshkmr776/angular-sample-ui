@@ -7,10 +7,11 @@
       <div class="d-flex align-items-center">
         <span class="text-name">MukkiCluster</span>
         <span class="badge badge-success">STABLE</span> &nbsp;
-        <!-- <span class="badge badge-danger">ERROR</span> &nbsp;
+        <span class="badge badge-danger">ERROR</span> &nbsp;
         <span class="badge badge-warning">WARNING</span> &nbsp;
         <span class="badge badge-warning">UNKNOWN</span> &nbsp;
-        <span class="badge badge-info">MAINTAINANCE</span> &nbsp; -->
+        <span class="badge badge-info">MAINTAINANCE</span> &nbsp;
+        <span class="badge badge-light">HANA Cluster</span> &nbsp;
       </div>
       <div class="text-monospace">
         <a [routerLink]="['/home']" class="btn text-white p-0 text-decoration-none">Home</a> / <span class="text-muted">Cluster</span>
@@ -20,23 +21,8 @@
 </div>
 
 <ul class="nav-subbanner d-flex align-items-center sticky-top">
-  <li class="item d-flex align-items-center" (click)="setView(VIEW_TYPES.INFO)" [ngClass]="{'active': VIEW_TYPES.INFO == selectedViewType}">
-    Information
-  </li>
-  <li class="item d-flex align-items-center" (click)="setView(VIEW_TYPES.STAT)" [ngClass]="{'active': VIEW_TYPES.STAT == selectedViewType}">
-    Statistics
-  </li>
-  <li class="item d-flex align-items-center" (click)="setView(VIEW_TYPES.LOG)" [ngClass]="{'active': VIEW_TYPES.LOG == selectedViewType}">
-    Logs
-  </li>
-  <li class="item d-flex align-items-center" (click)="setView(VIEW_TYPES.EVENT)" [ngClass]="{'active': VIEW_TYPES.EVENT == selectedViewType}">
-    Events
-  </li>
-  <li class="item d-flex align-items-center" (click)="setView(VIEW_TYPES.RG)" [ngClass]="{'active': VIEW_TYPES.RG == selectedViewType}">
-    Resource Groups
-  </li>
-  <li class="item d-flex align-items-center" (click)="setView(VIEW_TYPES.SETTING)" [ngClass]="{'active': VIEW_TYPES.SETTING == selectedViewType}">
-    Settings
+  <li class="item d-flex align-items-center" *ngFor="let item of VIEW_TYPES | keyvalue" (click)="setView(item.value)" [ngClass]="{'active': item.value == selectedViewType}">
+    {{item.value}}
   </li>
 </ul>
 
