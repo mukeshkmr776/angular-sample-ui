@@ -6,12 +6,12 @@
     <div class="flex-column d-flex">
       <div class="d-flex align-items-center">
         <span class="text-name">MukkiCluster</span>
-        <span class="badge badge-success">STABLE</span> &nbsp;
-        <span class="badge badge-danger">ERROR</span> &nbsp;
-        <span class="badge badge-warning">WARNING</span> &nbsp;
-        <span class="badge badge-warning">UNKNOWN</span> &nbsp;
-        <span class="badge badge-info">MAINTAINANCE</span> &nbsp;
-        <span class="badge badge-light">HANA Cluster</span> &nbsp;
+        <span class="badge badge-success">STABLE      </span> &nbsp;
+        <span class="badge badge-danger" >ERROR       </span> &nbsp;
+        <span class="badge badge-warning">WARNING     </span> &nbsp;
+        <span class="badge badge-warning">UNKNOWN     </span> &nbsp;
+        <span class="badge badge-info"   >MAINTAINANCE</span> &nbsp;
+        <span class="badge badge-light"  >HANA Cluster</span> &nbsp;
       </div>
       <div class="text-monospace">
         <a [routerLink]="['/home']" class="btn text-white p-0 text-decoration-none">Home</a> / <span class="text-muted">Cluster</span>
@@ -21,57 +21,48 @@
 </div>
 
 <ul class="nav-subbanner d-flex align-items-center sticky-top">
-  <li class="item d-flex align-items-center" *ngFor="let item of VIEW_TYPES | keyvalue" (click)="setView(item.value)" [ngClass]="{'active': item.value == selectedViewType}">
-    {{item.value}}
-  </li>
-</ul>
+    <li class="item d-flex align-items-center" *ngFor="let item of VIEW_TYPES | keyvalue" (click)="setView(item.value)" [ngClass]="{'active': item.value == selectedViewType}">
+      {{item.value}}
+    </li>
+  </ul>
 
-<!-- Add flex-fill to stretch box to bottom -->
-<div class="content d-flex flex-column flex-fill" *ngIf="isLoading">
-  <div class="item d-flex align-items-center flex-fill">
+<!-- Remove flex-fill to make box auto height -->
+<div class="content d-flex flex-column flex-fill">
+
+  <!-- Default spinner -->
+  <div class="item d-flex align-items-center flex-fill" *ngIf="isLoading">
     <div class="svg-wrapper m-auto">
       <svg class="circle-loader" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="15" />
       </svg>
     </div>
   </div>
-</div>
-  
-<div class="content d-flex flex-column flex-fill" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.INFO">
-  <div class="item">
+
+  <div class="item" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.INFO">
     <p>{{selectedViewType}}</p>
-    <span *ngFor="let n of [1,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9]">
+    <span *ngFor="let n of noOfTimes">
       Lorem Ipsum &nbsp;
     </span>
   </div>
-</div>
 
-<div class="content d-flex flex-column flex-fill" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.STAT">
-  <div class="item">
+  <div class="item" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.STAT" >
     <span>{{selectedViewType}}</span>
   </div>
-</div>
 
-<div class="content d-flex flex-column flex-fill" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.LOG">
-  <div class="item d-flex flex-column flex-fill">
+  <div class="item" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.LOG" >
     <span>{{selectedViewType}}</span>
   </div>
-</div>
 
-<div class="content d-flex flex-column flex-fill" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.EVENT">
-  <div class="item">
+  <div class="item" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.EVENT" >
     <span>{{selectedViewType}}</span>
   </div>
-</div>
 
-<div class="content d-flex flex-column flex-fill" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.RG">
-  <div class="item">
+  <div class="item" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.RG" >
     <span>{{selectedViewType}}</span>
   </div>
-</div>
 
-<div class="content d-flex flex-column flex-fill" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.SETTING">
-  <div class="item">
+  <div class="item" *ngIf="!isLoading && selectedViewType === VIEW_TYPES.SETTING" >
     <span>{{selectedViewType}}</span>
   </div>
+
 </div>

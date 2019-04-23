@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { fadeIn } from 'src/app/animations/fadeIn';
-import { trigger } from '@angular/animations';
-import { from, Observable } from 'rxjs';
-import { delay, take } from 'rxjs/operators';
+
+import { from } from 'rxjs';
+import { delay, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
-  styleUrls: ['./view.component.less'],
-  animations: [trigger('fadeIn', fadeIn())]
+  styleUrls: ['./view.component.less']
 })
 export class ViewComponent implements OnInit {
 
@@ -26,20 +24,22 @@ export class ViewComponent implements OnInit {
 
   selectedViewType;
   isLoading = false;
+  noOfTimes = [];
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe((value: any) => { this.id = value.id; });
   }
-  
+
   ngOnInit() {
     this.setView(this.VIEW_TYPES.EVENT);
+    for (let x = 0 ; x < 500; x++) { this.noOfTimes.push(0); }
   }
 
   setView(viewBox: any) {
     if (this.selectedViewType !== viewBox) {
       this.isLoading = true;
       this.selectedViewType = viewBox;
-      from([viewBox]).pipe(take(1)).pipe(delay(3000)).subscribe((item) => {
+      from([viewBox]).pipe(distinctUntilChanged()).pipe(delay(5000)).subscribe((item) => {
         this.isLoading = false;
       });
     }
