@@ -1,0 +1,4 @@
+language: node_js
+dist: bionic
+script: npm run build-prod
+
