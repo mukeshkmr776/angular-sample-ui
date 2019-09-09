@@ -21,10 +21,10 @@
 </div>
 
 <ul class="nav-subbanner d-flex align-items-center sticky-top">
-    <li class="item d-flex align-items-center" *ngFor="let item of VIEW_TYPES | keyvalue" (click)="setView(item.value)" [ngClass]="{'active': item.value == selectedViewType}">
-      {{item.value}}
-    </li>
-  </ul>
+  <li class="item d-flex align-items-center" *ngFor="let item of VIEW_TYPES | keyvalue" (click)="setView(item.value)" [ngClass]="{'active': item.value == selectedViewType}">
+    {{item.value}}
+  </li>
+</ul>
 
 <!-- Remove flex-fill to make box auto height -->
 <div class="content d-flex flex-column flex-fill">
