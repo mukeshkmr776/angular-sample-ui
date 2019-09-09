@@ -4,3 +4,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 TravisCI Build Status:
 [![Build Status](https://travis-ci.com/mukeshkmr776/angular-sample-ui.svg?branch=master)](https://travis-ci.com/mukeshkmr776/angular-sample-ui)
+
+Live Demo: https://mukeshkmr776.github.io/angular-sample-ui/
