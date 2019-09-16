@@ -6,4 +6,4 @@ TravisCI [![Build Status](https://travis-ci.com/mukeshkmr776/angular-sample-ui.s
 
 Azure Pipeline [![Build Status](https://dev.azure.com/mukeshkmr776/sample-project/_apis/build/status/mukeshkmr776.angular-sample-ui?branchName=master)](https://dev.azure.com/mukeshkmr776/sample-project/_build/latest?definitionId=1&branchName=master)
 
-Live Demo: https://mukeshkmr776.github.io/angular-sample-ui/
+Live Demo: https://mukeshkmr776.github.io/angular-sample-ui/#login
