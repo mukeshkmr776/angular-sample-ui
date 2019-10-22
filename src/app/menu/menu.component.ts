@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TreeService } from '../services/tree.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,13 +10,17 @@ export class MenuComponent implements OnInit {
 
   headerOptions: Array<object> = [
     { name: 'Home', url: '/home' },
-    { name: 'ClusterView', url: '/view/5' }
+    { name: 'ClusterView', url: '/home/view/5' }
   ];
 
   active = true;
 
-  constructor() { }
+  constructor(private treeService: TreeService) { }
 
   ngOnInit() { }
+
+  toggleTree() {
+    this.treeService.toggleTree();
+  }
 
 }

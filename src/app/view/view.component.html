@@ -26,12 +26,13 @@
   </li>
 </ul>
 
+
 <!-- Remove flex-fill to make box auto height -->
 <div class="content d-flex flex-column flex-fill">
 
   <!-- Default spinner -->
   <div class="item d-flex align-items-center flex-fill" *ngIf="isLoading">
-    <div class="svg-wrapper m-auto">
+    <div class="svg-wrapper m-auto p-5">
       <svg class="circle-loader" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="15" />
       </svg>

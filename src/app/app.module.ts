@@ -15,6 +15,10 @@ import { MenuComponent } from './menu/menu.component';
 import { ViewComponent } from './view/view.component';
 import { FuseSplashScreenService } from 'src/app/services/splash-screen.service';
 
+import { MaterialModule } from './material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TreeService } from './services/tree.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,12 +32,14 @@ import { FuseSplashScreenService } from 'src/app/services/splash-screen.service'
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
+    FormsModule, ReactiveFormsModule,
     LoadingBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     })
   ],
-  providers: [ FuseSplashScreenService ],
+  providers: [ FuseSplashScreenService, TreeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

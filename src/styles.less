@@ -2,13 +2,7 @@
 
 @import './app/loader/loader.component.less';
 
-html,
-body {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex: 1 0 auto;
-  width: 100%;
-  height: 100%;
+html, body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: auto;
@@ -23,7 +17,7 @@ fuse .loading {
   background-color: #2D323D;
 }
 
-app-root, router-outlet~* {
+app-root, .top-level-router ~ * {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
@@ -73,8 +67,11 @@ input:focus {
 }
 
 * {
-  -webkit-user-select: none; /* Safari */        
+  -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

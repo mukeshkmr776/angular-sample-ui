@@ -1,18 +1,15 @@
 <div class="auth d-flex align-items-center flex-column justify-content-center">
 
-  <!-- <div class="alert alert-danger" role="alert">
-    Invalid email or password. Please try again.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      &nbsp;<span aria-hidden="true">&times;</span>
-    </button>
-  </div> -->
-
   <form class="login-form">
+
+    <!-- Email Field -->
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
+
+    <!-- Password Field -->
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
       <input type="password" class="form-control" id="exampleInputPassword1"/>
@@ -21,13 +18,21 @@
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Remember me</label>
     </div>
+
+    <!-- Login button -->
     <a class="btn btn-success w-100" [routerLink]="['/home']">Login</a>
 
+    <!-- Forgot Password -->
     <a class="forgot-pass-link text-center nav-link" [routerLink]="['/login']">Forgot password?</a>
   </form>
 
   <form class="login-form mt-2 text-center">
     Need account? <a class="text-decoration-none" href="javascript: void(0);">Create an account</a>
   </form>
+
+  <!-- <div class="login-error alert alert-danger d-flex align-items-center" role="alert">
+    <div>Invalid email or password. Please try again.</div>
+    <div>&nbsp;<span aria-hidden="true">&times;</span></div>
+  </div> -->
 
 </div>
