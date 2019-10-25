@@ -4,11 +4,29 @@
 </mat-toolbar>
 
 <mat-sidenav-container class="example-container flex-fill">
+
+  <!-- Tree Panel -->
   <mat-sidenav #sidenav mode="side" opened class="example-sidenav" [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top" [fixedBottomGap]="options.value.bottom">
-    Sidenav
+    <!-- Start -->
+    <ng-scrollbar class="custom-tree-scrollbar">
+      <div class="box">
+        <!-- Zone clusters -->
+        <div class="tree-header">Zone clusters ({{zones.length}})</div>
+        <app-tree *ngFor="let item of zones" [item]="item"></app-tree>
+
+        <!-- Unassigned clusters -->
+        <div class="tree-header">Unassigned clusters ({{clusters.length}})</div>
+        <app-tree *ngFor="let item of clusters" [item]="item"></app-tree>
+      </div>
+    </ng-scrollbar>
+    <!-- End -->
   </mat-sidenav>
 
+  <!-- Content -->
   <mat-sidenav-content [formGroup]="options">
-    <router-outlet #outlet="outlet"></router-outlet>
+    <ng-scrollbar>
+      <router-outlet></router-outlet>
+    </ng-scrollbar>
   </mat-sidenav-content>
+
 </mat-sidenav-container>

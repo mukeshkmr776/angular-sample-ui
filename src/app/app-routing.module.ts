@@ -12,9 +12,9 @@ import {
 import {
   LoginComponent
 } from './login/login.component';
-import {
-  ViewComponent
-} from './view/view.component';
+import { ClusterViewComponent } from './view/cluster/cluster-view.component';
+import { NodeViewComponent } from './view/node/node-view.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -24,11 +24,25 @@ const routes: Routes = [
       animation: 'home'
     },
     children: [{
-        path: 'view/:id',
-        component: ViewComponent,
+        path: '',
+        component: DashboardComponent,
         data: {
-          animation: 'view'
+          animation: 'dashboard'
         }
+    },
+    {
+        path: 'cluster/:clusterId',
+        component: ClusterViewComponent,
+        data: {
+          animation: 'cluster'
+        }
+    },
+    {
+      path: 'cluster/:clusterId/node/:nodeName',
+      component: NodeViewComponent,
+      data: {
+        animation: 'node'
+      }
     }]
   },
   {

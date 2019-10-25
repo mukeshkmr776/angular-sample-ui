@@ -1,0 +1,42 @@
+
+<div class="box d-flex align-items-stretch" [ngClass]="{'selected': selected}" [ngStyle]="{'padding-left.px': padding }">
+  <!-- Status Icon -->
+  <div class="icon" [ngClass]="item.stateIcon" attr.title="{{ ICONS_ENUM[item.stateIcon] }}"></div>
+
+  <!-- Name and sub-status -->
+  <div class="text flex-fill d-flex flex-column align-item-center text-truncate" (click)=selectItem(item)>
+    <div class="text-main text-truncate" attr.title="{{ item?.name }}">{{item?.name}}</div>
+    <div class="text-sub text-truncate">{{item?.subtext}}</div>
+  </div>
+
+  <!-- Popover -->
+  <div class="tree-popover">
+    <div popoverClass="popover-class" placement="bottom" container="body" triggers="manual">
+      ...
+    </div>
+  </div>
+
+  <!-- Expand-Collapse Icon -->
+  <div class="img"
+    *ngIf="!isGathering"
+    [ngClass]="item.type !== 'rg' ? (item?.expand ? 'img-expand' : 'img-collapse') : 'img-none'"
+    (click)="toggleExpand(item)">
+  </div>
+
+  <!-- Gathering Icon on Expand for RG -->
+  <div class="gathering-data" *ngIf="isGathering">
+    <app-gathering-data (onCancel)="onCancel()" [showCancel]="true" [mode]="selected ? 'dark' : 'light'"></app-gathering-data>
+  </div>
+
+</div>
+
+<!-- Iterating on childrens -->
+<ng-template [ngIf]="item.expand && item?.children">
+  <app-tree class="child-bg" *ngFor="let item of item.children" [item]="item" [isUnassigned]="isUnassigned"></app-tree>
+</ng-template>
+
+
+
+<!-- <ng-template [ngIf]="isGathering">
+  <div class="gathering">Loading more...</div>
+</ng-template> -->

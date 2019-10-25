@@ -9,6 +9,9 @@ html, body {
   -moz-osx-font-smoothing: auto;
 }
 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 .login-page {
   background-color: #343a40 !important;
 }
@@ -73,5 +76,8 @@ input:focus {
   user-select: none; /* Standard */
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// This will prevent scrollbar content to get bigger which prevents text-truncate not happening.
+.custom-tree-scrollbar .ng-scroll-content {
+  max-width: 350px;
+}

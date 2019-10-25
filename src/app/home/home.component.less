@@ -8,9 +8,18 @@
     color: white;
 }
 
+.example-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 3;
+}
+
 .example-container {
   position: absolute;
-  top: 64px;
+  top: 50px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -22,11 +31,16 @@
   justify-content: center;
   max-width: 350px;
   min-width: 350px;
+  background-color: rgba(25, 84, 126, 0.925);
+
+  &.mat-drawer-side {
+    border-right: none;
+  }
 }
 
-.example-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.tree-header {
+  color: gray;
+  padding: 2px 5px;
+  font-size: 0.825em;
+  background-color: lightgray;
 }

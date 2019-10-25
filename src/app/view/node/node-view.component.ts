@@ -5,19 +5,18 @@ import { from } from 'rxjs';
 import { delay, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-view',
-  templateUrl: './view.component.html',
-  styleUrls: ['./view.component.less']
+  selector: 'app-node-view',
+  templateUrl: './node-view.component.html',
+  styleUrls: ['./node-view.component.less']
 })
-export class ViewComponent implements OnInit {
+export class NodeViewComponent implements OnInit {
 
-  id;
+  clusterId;
+  nodeName;
 
   VIEW_TYPES = {
     INFO: 'Information',
-    STAT: 'Statistics',
-    LOG: 'Logs',
-    EVENT: 'Events',
+    METRIC: 'Metrics',
     RG: 'Resource Groups',
     SETTING: 'Settings'
   };
@@ -27,12 +26,14 @@ export class ViewComponent implements OnInit {
   noOfTimes = [];
 
   constructor(private route: ActivatedRoute) {
-    this.route.params.subscribe((value: any) => { this.id = value.id; });
+    this.route.params.subscribe((value: any) => { this.clusterId = value.clusterId; this.nodeName = value.nodeName;});
   }
 
   ngOnInit() {
-    this.setView(this.VIEW_TYPES.EVENT);
-    for (let x = 0 ; x < 500; x++) { this.noOfTimes.push(0); }
+    this.setView(this.VIEW_TYPES.INFO);
+
+    // Just to print Large text
+    for (let x = 0 ; x < 1000; x++) { this.noOfTimes.push(0); }
   }
 
   setView(viewBox: any) {
