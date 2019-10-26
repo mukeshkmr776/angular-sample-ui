@@ -10,33 +10,26 @@ import {
   MatRippleModule,
   MatDialogModule,
   MatExpansionModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatTabsModule
 } from '@angular/material';
 
+let modules = [
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatSidenavModule,
+  MatRippleModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatTabsModule
+];
+
 @NgModule({
-  imports: [
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatSidenavModule,
-    MatRippleModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatFormFieldModule
-  ],
-  exports: [
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatSidenavModule,
-    MatRippleModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatFormFieldModule
-  ]
+  imports: modules,
+  exports: modules
 })
 export class MaterialModule {}
