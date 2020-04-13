@@ -10,7 +10,7 @@ export class AboutService {
   constructor(public dialog: MatDialog) { }
 
   openAbout() {
-    this.dialog.open(AboutComponent);
+    this.dialog.open(AboutComponent, { disableClose: true });
   }
 
   openFAQ() {

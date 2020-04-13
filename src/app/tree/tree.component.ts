@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class TreeComponent implements OnInit, OnDestroy {
 
-  @Input() isUnassigned: boolean;
+  @Input() isUnassigned?: boolean;
   @Input() item: any;
 
   padding: number;

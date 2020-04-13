@@ -16,7 +16,7 @@
 
         <!-- Unassigned clusters -->
         <div class="tree-header">Unassigned clusters ({{clusters.length}})</div>
-        <app-tree *ngFor="let item of clusters" [item]="item"></app-tree>
+        <app-tree *ngFor="let item of clusters" [item]="item" [isUnassigned]="true"></app-tree>
       </div>
     </ng-scrollbar>
     <!-- End -->
