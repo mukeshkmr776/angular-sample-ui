@@ -1,5 +1,5 @@
 <!-- Testing -->
-<mat-toolbar class="example-header bg-dark">
+<mat-toolbar class="example-header mat-primary">
     <app-menu></app-menu>
 </mat-toolbar>
 
@@ -10,13 +10,9 @@
     <!-- Start -->
     <ng-scrollbar class="custom-tree-scrollbar">
       <div class="box">
-        <!-- Zone clusters -->
-        <div class="tree-header">Zone clusters ({{zones.length}})</div>
-        <app-tree *ngFor="let item of zones" [item]="item"></app-tree>
-
-        <!-- Unassigned clusters -->
-        <div class="tree-header">Unassigned clusters ({{clusters.length}})</div>
-        <app-tree *ngFor="let item of clusters" [item]="item" [isUnassigned]="true"></app-tree>
+        <!-- <div *ngFor="let item of list">
+          {{item}}
+        </div> -->
       </div>
     </ng-scrollbar>
     <!-- End -->

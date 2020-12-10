@@ -27,9 +27,6 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.clusters = this.dataService.getUnassignedClusters();
-    this.zones = this.dataService.getZonedClusters();
-
     this.toggleTree.message$.subscribe( value => {
       if (this.sidenav) {
         this.sidenav.toggle();

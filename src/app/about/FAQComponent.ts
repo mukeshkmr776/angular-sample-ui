@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
               <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    What is PowerHA?
+                    What is ConnetDirect?
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>PowerHA is lorem ipsum lorem ipsum...</p>
+                <p>ConnetDirect is lorem ipsum lorem ipsum...</p>
               </mat-expansion-panel>
               <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    Features of PowerHA
+                    Features of ConnetDirect
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <p>Coming soon...</p>

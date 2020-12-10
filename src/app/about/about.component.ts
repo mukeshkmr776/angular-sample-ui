@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
-  template: `<h2 mat-dialog-title>About IBM PowerHA</h2>
+  template: `<h2 mat-dialog-title>About</h2>
             <mat-dialog-content class="mat-typography">
               <p>
                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum

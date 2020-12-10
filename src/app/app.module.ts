@@ -16,12 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { LoaderComponent } from './loader/loader.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
-import { ClusterViewComponent } from './view/cluster/cluster-view.component';
-import { NodeViewComponent } from './view/node/node-view.component';
 
 import { TreeService } from './services/tree.service';
-import { TreeItemComponent } from './tree/directives/tree-item/tree-item.component';
-import { TreeComponent } from './tree/tree.component';
 import { DataService } from './services/data.service';
 import { FuseSplashScreenService } from 'src/app/services/splash-screen.service';
 
@@ -36,15 +32,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ClusterViewComponent,
-    NodeViewComponent,
     LoaderComponent,
     LoginComponent,
     MenuComponent,
     DashboardComponent,
-
-    TreeComponent,
-    TreeItemComponent,
     GatheringDataComponent,
     AboutComponent,
     FAQComponent

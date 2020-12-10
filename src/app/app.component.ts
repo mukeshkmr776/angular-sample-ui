@@ -15,9 +15,9 @@ export class AppComponent implements AfterViewInit {
   currentUrl: string;
 
   constructor(private router: Router, private loadingBarService: LoadingBarService,
-    private fuseSplashScreenService: FuseSplashScreenService) {
-this.loading = true;
-}
+              private fuseSplashScreenService: FuseSplashScreenService) {
+    this.loading = true;
+  }
 
 
   ngAfterViewInit() {
