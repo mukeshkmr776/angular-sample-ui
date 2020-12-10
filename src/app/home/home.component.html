@@ -10,9 +10,10 @@
     <!-- Start -->
     <ng-scrollbar class="custom-tree-scrollbar">
       <div class="box">
-        <!-- <div *ngFor="let item of list">
-          {{item}}
-        </div> -->
+        <div class="item d-flex align-items-center" [ngClass]="{'item-active': page.selected}" *ngFor="let page of pages" (click)="showPage(page)">
+          <i class="material-icons">{{page.icon}}</i> &nbsp;&nbsp;
+          <span>{{page.name}}</span>
+        </div>
       </div>
     </ng-scrollbar>
     <!-- End -->

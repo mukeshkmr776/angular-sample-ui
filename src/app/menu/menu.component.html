@@ -3,13 +3,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <a class="navbar-brand d-flex align-items-center flex-fill">
     <i class="material-icons material-icons-menu" tabindex="0" (keyup.space)="toggleTree()" (keyup.enter)="toggleTree()" (click)="toggleTree()">menu</i> &nbsp;&nbsp;
-    <div>IBM</div>&nbsp;
     <div class="font-weight-light">Connect</div>
     <div class="font-weight-bolader">Direct</div>
   </a>
 
 
   <ul class="navbar-nav ml-5 mat-typography">
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center text-white">
+        <i class="material-icons" title="Connected via Airtel">signal_wifi_4_bar_lock</i>
+      </a>
+    </li>
     <li class="nav-item">
       <a class="nav-link d-flex align-items-center" href="javascript: void(0);">
         <i class="material-icons" title="Knowledge Center">help</i>
@@ -21,9 +25,9 @@
         <span class="alert-badge" [ngClass]="{'alert-badge-active': active}">9</span>
       </a>
     </li>
-    <li class="d-flex align-items-center text-white nav-item dropdown menubar-login-details">
+    <li class="nav-item  d-flex align-items-center text-white dropdown menubar-login-details">
       <a class="nav-link dropdown-toggle d-flex align-items-center active" data-toggle="dropdown" href="#">
-        <i class="material-icons">account_circle</i> &nbsp;&nbsp;
+        <i class="material-icons">face</i> &nbsp;&nbsp;
         <span class="text-white text-lead">mukeshkmr776@gmail.com</span> &nbsp;&nbsp;
       </a>
       <div class="dropdown-menu">

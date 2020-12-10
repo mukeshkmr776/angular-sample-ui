@@ -15,6 +15,7 @@
   right: 0;
   height: 50px;
   z-index: 3;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
 }
 
 .example-container {
@@ -31,16 +32,17 @@
   justify-content: center;
   max-width: 300px;
   min-width: 300px;
-  background-color: rgba(25, 84, 126, 0.925);
-
+  // background-color: lightblue;
   &.mat-drawer-side {
     border-right: none;
   }
 }
 
-.tree-header {
-  color: gray;
-  padding: 2px 5px;
-  font-size: 0.825em;
-  background-color: lightgray;
+
+.item {
+  padding: 17px;
+  cursor: pointer;
+  &-active {
+    background-color: whitesmoke;
+  }
 }
